@@ -1,0 +1,120 @@
+<Window x:Class="ShutdownTimerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Extinction" Height="400" Width="300" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" WindowStyle="None" Background="Transparent"
+        Loaded="Window_Loaded">
+
+    <Border Background="#CCFFFFFF" CornerRadius="20">
+        <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#F3523B" Offset="0" />
+                    <GradientStop Color="#D93043" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <!-- Barre de titre -->
+            <DockPanel VerticalAlignment="Top" LastChildFill="False" Margin="0,5,5,0" HorizontalAlignment="Right">
+                <Button Width="30" Height="30" Background="Transparent" BorderThickness="0" Click="Minimize_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <TextBlock Text="―" FontSize="18" FontWeight="Bold" Foreground="White" 
+                                        HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Width="30" Height="30" Background="Transparent" BorderThickness="0" Click="Close_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <TextBlock Text="✖" FontSize="14" FontWeight="Regular" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </DockPanel>
+
+
+            <!-- Ton contenu existant -->
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
+
+                <StackPanel x:Name="InputPanel">
+                    <TextBlock Text="Dans combien de temps souhaitez-vous éteindre le PC ?" 
+                               TextAlignment="Center" Foreground="White" FontSize="14"
+                               FontWeight="SemiBold" TextWrapping="Wrap" Margin="10"/>
+
+                    <Border Background="#19FFFFFF" CornerRadius="12" Padding="10" Margin="0,10,0,10">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Content="−" FontWeight="Bold" FontSize="20" Width="30" Height="40"
+                                    Background="Transparent" BorderThickness="0" Foreground="White"
+                                    Click="BtnMinus_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <TextBox x:Name="TxtValue" Text="1" Width="60" FontSize="24"
+                                     Background="Transparent" BorderThickness="0"
+                                     Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                            <Button Content="+" FontWeight="Bold" FontSize="20" Width="30" Height="40"
+                                    Background="Transparent" BorderThickness="0" Foreground="White"
+                                    Click="BtnPlus_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+
+                    <TextBlock Text="min" Foreground="White" FontSize="14" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                    <Button Content="✓ CONFIRMER" Width="160" Height="40" Background="White" Foreground="Black"
+                            FontWeight="Bold" FontSize="14" Cursor="Hand" Click="Confirm_Click" BorderThickness="0"
+                            Margin="0,0,0,10">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="20" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel x:Name="CountdownPanel" Visibility="Collapsed">
+                    <TextBlock x:Name="CountdownText" Text="00:00" FontSize="28" FontWeight="Bold"
+                               Foreground="White" HorizontalAlignment="Center" Margin="0,10"/>
+                    <Button x:Name="CancelBtn" Content="✖ ANNULER" Width="120" Height="35"
+                            Background="Transparent" Foreground="White" FontWeight="Bold" FontSize="12"
+                            Click="Cancel_Click" BorderThickness="0">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

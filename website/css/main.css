@@ -1,0 +1,107 @@
+
+/* main.css */
+
+body,html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+header img.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1440px;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    perspective: 600px;
+    transform-style: preserve-3d;
+    flex-wrap: wrap;
+}
+
+main .intro {
+    max-width: 650px;
+}
+
+main .intro h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+main .intro h1 span {
+    text-decoration: line-through;
+}
+
+main .intro p {
+    margin-bottom: 16px;
+    &:last-of-type {
+        margin-bottom: 30px;
+    }
+}
+
+.download-btn {
+    background: #e62941;
+    color: rgb(255, 255, 255);
+    padding: 14px 36px;
+    font-size: 1.25rem;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.screenshot {
+    transform: rotate3d(0, 1, 0, -14deg);
+    width: calc(100% - 650px - 40px);
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    display: inline-block;
+    filter : drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+    min-width: 200px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+    .screenshot {
+        display: none;
+    }
+}
