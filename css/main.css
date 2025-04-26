@@ -72,6 +72,12 @@ main .intro p {
     }
 }
 
+main .intro p a {
+    text-decoration: underline;
+    color: #e62941;
+    cursor: pointer;
+}
+
 .download-btn {
     background: #e62941;
     color: rgb(255, 255, 255);
