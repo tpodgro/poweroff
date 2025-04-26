@@ -1,6 +1,6 @@
 # PowerOFF
 
-![PowerOFF Logo](website/img/power-off.png)
+![PowerOFF Logo](img/power-off.png)
 
 **PowerOFF** est un petit utilitaire open-source pour planifier l'extinction automatique de votre PC Windows en quelques clics.  
 Simple, moderne, rapide — et sans installation lourde !
@@ -42,7 +42,7 @@ Ce projet est sous licence [MIT](LICENSE).
 
 | Sélection du temps | Compte à rebours |
 |:-------------------:|:---------------:|
-| ![Screen1](website/img/screen1.png) | ![Screen2](website/img/screen2.png) |
+| ![Screen1](img/screen1.png) | ![Screen2](img/screen2.png) |
 
 ---
 
