@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\ShutdownTimerWPF\\poweroff\\ShutdownTimerWPF.csproj": {}
+    "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\poweroff\\ShutdownTimerWPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\ShutdownTimerWPF\\poweroff\\ShutdownTimerWPF.csproj": {
+    "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\poweroff\\ShutdownTimerWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\ShutdownTimerWPF\\poweroff\\ShutdownTimerWPF.csproj",
+        "projectUniqueName": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\poweroff\\ShutdownTimerWPF.csproj",
         "projectName": "ShutdownTimerWPF",
-        "projectPath": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\ShutdownTimerWPF\\poweroff\\ShutdownTimerWPF.csproj",
+        "projectPath": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\poweroff\\ShutdownTimerWPF.csproj",
         "packagesPath": "C:\\Users\\tpodg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\ShutdownTimerWPF\\poweroff\\obj\\",
+        "outputPath": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\poweroff\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

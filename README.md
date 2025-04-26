@@ -42,7 +42,7 @@ Ce projet est sous licence [MIT](LICENSE).
 
 | Sélection du temps | Compte à rebours |
 |:-------------------:|:---------------:|
-| ![Screen1](website/img/5070245.7_image.png) | ![Screen2](website/img/5061480.4_image.png) |
+| ![Screen1](website/img/screen1.png) | ![Screen2](website/img/screen2.png) |
 
 ---
 
