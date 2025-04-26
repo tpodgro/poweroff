@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShutdownTimerWPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8486d99cc51b0fce1df41dbdc5f821c888d2af72")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfe943878aa5b4513d7bd0fce9fe4cb89054ac21")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShutdownTimerWPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShutdownTimerWPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
