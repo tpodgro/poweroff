@@ -3,11 +3,16 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <Icon>power_icon.ico</Icon>
-    <ApplicationIcon>power_icon.ico</ApplicationIcon>
+    <Icon>poweroff.ico</Icon>
+    <ApplicationIcon>poweroff.ico</ApplicationIcon>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <PublishTrimmed>false</PublishTrimmed>
+    <DebugType>none</DebugType>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Resource Include="power_icon.ico" />
+    <Resource Include="poweroff.ico" />
   </ItemGroup>
 </Project>

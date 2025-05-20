@@ -13,21 +13,15 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="MainBorder"
-                        Background="#4361ee"
-                        BorderBrush="#3a50c9"
-                        BorderThickness="1"
-                        CornerRadius="12"
-                        Opacity="0.8">
+                                Background="#4361ee"
+                                BorderBrush="#3a50c9"
+                                BorderThickness="1"
+                                CornerRadius="12"
+                                Opacity="0.8">
                             <ContentPresenter HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"
-                                      Margin="10,5"/>
+                                            VerticalAlignment="Center"
+                                            Margin="10,5"/>
                         </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="MainBorder" Property="Background" Value="#4361ee"/>
-                                <Setter TargetName="MainBorder" Property="Opacity" Value="1"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -36,7 +30,6 @@
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Padding" Value="10,5"/>
         </Style>
-
 
         <Style x:Key="OutlineButton" TargetType="Button">
             <Setter Property="Template">
@@ -50,11 +43,6 @@
                                 Opacity="0.6">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Border" Property="Opacity" Value="1"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -75,12 +63,6 @@
                                 Opacity="0.6">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#1a1a3a"/>
-                                <Setter TargetName="Border" Property="Opacity" Value="1"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -98,11 +80,6 @@
                                 BorderThickness="0">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#1a1a3a"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -124,11 +101,6 @@
                                 Height="30">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#1a1a3a"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -185,13 +157,8 @@
                                 Background="Transparent" 
                                 BorderThickness="0">
                             <TextBlock Text="✕" Foreground="#4cc9f0" FontSize="14" 
-                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="#1a1a3a"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -202,13 +169,10 @@
             <Setter Property="Foreground" Value="#4cc9f0"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="TextDecorations" Value="Underline"/>
-                </Trigger>
-            </Style.Triggers>
+            <!-- Supprimé : aucun effet hover -->
         </Style>
     </Window.Resources>
+
 
     <Border CornerRadius="12">
         <Border.Background>
@@ -253,26 +217,22 @@
                     <StackPanel x:Name="InputPanel" VerticalAlignment="Center" Margin="0,10,0,0">
                         <!-- Icône d'horloge stylisée -->
                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-    <!-- Cercle de l'horloge -->
-    <Border Width="160" Height="160" Background="#0A0A18" BorderBrush="#1A1A3A" BorderThickness="1" CornerRadius="80">
-        <Canvas Width="160" Height="160">
-            <!-- Cercle extérieur -->
-            <Ellipse Canvas.Left="9" Canvas.Top="9" Width="140" Height="140" Stroke="#1A1A3A99" StrokeThickness="1" Fill="Transparent"/>
+                            <!-- Cercle de l'horloge -->
+                            <Border Width="160" Height="160" Background="#0A0A18" BorderBrush="#1A1A3A" BorderThickness="1" CornerRadius="80">
+                                <Canvas Width="160" Height="160">
+                                    <!-- Cercle extérieur -->
+                                    <Ellipse Canvas.Left="9" Canvas.Top="9" Width="140" Height="140" Stroke="#1A1A3A99" StrokeThickness="1" Fill="Transparent"/>
 
-            <!-- SVG intégré et centré -->
-            <Viewbox Stretch="Uniform" Width="96" Height="96" Canvas.Left="32" Canvas.Top="32">
-                <Canvas Width="24" Height="24">
-                    <Path Data="M12 21q-1.664 0-3.118-.626T6.34 18.66t-1.714-2.542T4 13t.626-3.118T6.34 7.34t2.542-1.714T12 5t3.118.626T17.66 7.34t1.714 2.542T20 13t-.626 3.118t-1.714 2.543t-2.542 1.713T12 21m3.146-4.146l.708-.708l-3.354-3.354V8h-1v5.208zM5.908 3.427l.707.707l-3.48 3.481l-.708-.707zm12.184 0l3.481 3.48l-.707.709l-3.481-3.481zM12 20q2.906 0 4.953-2.047T19 13t-2.047-4.953T12 6T7.047 8.047T5 13t2.047 4.953T12 20" 
+                                    <!-- SVG intégré et centré -->
+                                    <Viewbox Stretch="Uniform" Width="96" Height="96" Canvas.Left="32" Canvas.Top="32">
+                                        <Canvas Width="24" Height="24">
+                                            <Path Data="M12 21q-1.664 0-3.118-.626T6.34 18.66t-1.714-2.542T4 13t.626-3.118T6.34 7.34t2.542-1.714T12 5t3.118.626T17.66 7.34t1.714 2.542T20 13t-.626 3.118t-1.714 2.543t-2.542 1.713T12 21m3.146-4.146l.708-.708l-3.354-3.354V8h-1v5.208zM5.908 3.427l.707.707l-3.48 3.481l-.708-.707zm12.184 0l3.481 3.48l-.707.709l-3.481-3.481zM12 20q2.906 0 4.953-2.047T19 13t-2.047-4.953T12 6T7.047 8.047T5 13t2.047 4.953T12 20" 
                           Fill="#e2e8f0"/>
-                </Canvas>
-            </Viewbox>
-        </Canvas>
-    </Border>
-</StackPanel>
-
-
-
-
+                                        </Canvas>
+                                    </Viewbox>
+                                </Canvas>
+                            </Border>
+                        </StackPanel>
 
                         <!-- Heure actuelle en grand -->
                         <TextBlock x:Name="CurrentTimeDisplay" Text="23:30" FontSize="48" FontWeight="Bold" 

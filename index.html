@@ -4,39 +4,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerOFF - Planifiez l'extinction de votre PC</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+    <title>PowerOFF - Programmez l'arrêt intelligent de votre PC</title>
+    <meta name="description" content="PowerOFF - Application simple et légère pour programmer l'arrêt de votre PC">
+     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <!-- Éléments d'arrière-plan -->
+    <div class="background">
+        <div class="grid-overlay"></div>
+        <div class="gradient-overlay"></div>
+        <div class="circuit-board"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <img src="img/power-off.png" alt="PowerOFF Logo" class="logo">
-            <h2>PowerOFF</h2>
+            <a href="/" class="logo">
+                <div class="app-logo-icon2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/tpodgro/poweroff/google/material-design-icons/blob/master/LICENSE -->
+                        <path fill="currentColor"
+                            d="M11 12V4q0-.425.288-.712T12 3t.713.288T13 4v8q0 .425-.288.713T12 13t-.712-.288T11 12m1 9q-1.85 0-3.488-.712T5.65 18.35t-1.937-2.863T3 12q0-1.725.638-3.312T5.425 5.85q.275-.3.7-.3t.725.3q.275.275.25.688t-.3.737q-.85.95-1.325 2.163T5 12q0 2.9 2.05 4.95T12 19q2.925 0 4.963-2.05T19 12q0-1.35-.475-2.588t-1.35-2.187q-.275-.3-.288-.7t.263-.675q.3-.3.725-.3t.7.3q1.175 1.25 1.8 2.838T21 12q0 1.85-.712 3.488t-1.925 2.862t-2.85 1.938T12 21" />
+                    </svg></div>
+                <div class="glitch-text" data-text="PowerOFF">PowerOFF</div>
+            </a>
+            <nav class="main-nav">
+                <a href="#features" class="nav-link">Fonctionnalités</a>
+                <a href="#download" class="nav-link">Télécharger</a>
+            </nav>
+            <a href="https://github.com/tpodgro/poweroff" class="glowing-button">
+                <span class="icon github-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="24"
+                        viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/tpodgro/poweroff/Templarian/MaterialDesign/blob/master/LICENSE -->
+                        <path fill="currentColor"
+                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+                    </svg></span>
+                Voir sur GitHub
+            </a>
         </div>
     </header>
 
     <main>
-        <section class="intro">
-            <h1>Extinction programmée</h1>
-            <p>
-                PowerOFF est une application simple pour programmer l'arrêt de votre PC.<br/>
-                Définissez l'heure souhaitée, confirmez et laissez l'application s'occuper du reste.
-            </p>
-            <p>
-                PowerOFF est un projet Open-source, disponible sur <a href="https://github.com/tpodgro/poweroff" target="_blank">GitHub</a><br/>
-                Vous pouvez le télécharger et l'utiliser gratuitement.<br/>
-                Il est conçu pour être léger et facile à utiliser, sans fonctionnalités superflues.
-            </p>
-            <a href="https://github.com/tpodgro/poweroff/releases/download/PowerOFF/PowerOFF.zip" target="_blank" class="download-btn">Télécharger</a>
+        <!-- Section Hero -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="badge">
+                            <span class="badge-dot"></span>
+                            <span>Simple & Efficace</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            <span>Programmez l'arrêt</span>
+                            <span class="gradient-text">de votre PC</span>
+                        </h1>
+                        <p class="hero-description">
+                            Définissez l'heure souhaitée, confirmez et laissez PowerOFF s'occuper du reste.
+                            <span class="highlight">Simple, léger et efficace.</span>
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="https://github.com/tpodgro/poweroff/releases/download/PowerOFFv2/PowerOFFLauncher.zip" class="normal-button">
+                                <span class="icon download-icon"></span>
+                                Télécharger gratuitement
+                            </a>
+                            <a href="https://github.com/tpodgro/poweroff" target="_blank" rel="noopener noreferrer"
+                                class="outline-button">
+                                <span class="icon github-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                                        height="24"
+                                        viewBox="0 0 24 24"><!-- Icon from Material Design Icons by Pictogrammers - https://github.com/tpodgro/poweroff/Templarian/MaterialDesign/blob/master/LICENSE -->
+                                        <path fill="currentColor"
+                                            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+                                    </svg></span>
+                                Voir sur GitHub
+                            </a>
+                        </div>
+
+                        <div class="ratings">
+                            <span class="rating-text">5,0</span>
+                            <div class="stars">
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <div class="app-preview">
+                            <div class="app-header">
+                                <div class="app-logo">
+                                    <div class="app-logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16"
+                                            viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/tpodgro/poweroff/google/material-design-icons/blob/master/LICENSE -->
+                                            <path fill="currentColor"
+                                                d="M11 12V4q0-.425.288-.712T12 3t.713.288T13 4v8q0 .425-.288.713T12 13t-.712-.288T11 12m1 9q-1.85 0-3.488-.712T5.65 18.35t-1.937-2.863T3 12q0-1.725.638-3.312T5.425 5.85q.275-.3.7-.3t.725.3q.275.275.25.688t-.3.737q-.85.95-1.325 2.163T5 12q0 2.9 2.05 4.95T12 19q2.925 0 4.963-2.05T19 12q0-1.35-.475-2.588t-1.35-2.187q-.275-.3-.288-.7t.263-.675q.3-.3.725-.3t.7.3q1.175 1.25 1.8 2.838T21 12q0 1.85-.712 3.488t-1.925 2.862t-2.85 1.938T12 21" />
+                                        </svg></div>
+                                    <span>PowerOFF</span>
+                                </div>
+                                <div class="app-controls">
+                                    <span class="minimize">―</span>
+                                    <span class="close">✖</span>
+                                </div>
+                            </div>
+                            <div class="app-content">
+                                <div class="input-panel">
+                                    <div class="clock-wrapper">
+                                        <div class="clock-border">
+                                            <div class="outer-circle"></div>
+                                            <div class="icon-container">
+                                                <svg viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 21q-1.664 0-3.118-.626T6.34 18.66t-1.714-2.542T4 13t.626-3.118T6.34 7.34t2.542-1.714T12 5t3.118.626T17.66 7.34t1.714 2.542T20 13t-.626 3.118t-1.714 2.543t-2.542 1.713T12 21m3.146-4.146l.708-.708l-3.354-3.354V8h-1v5.208zM5.908 3.427l.707.707l-3.48 3.481l-.708-.707zm12.184 0l3.481 3.48l-.707.709l-3.481-3.481zM12 20q2.906 0 4.953-2.047T19 13t-2.047-4.953T12 6T7.047 8.047T5 13t2.047 4.953T12 20" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time">23:30</div>
+                                <div class="date">18/05/2025</div>
+                                <div class="datetime-picker">
+                                    <span class="calendar-icon">
+                                        <svg viewBox="0 0 24 24">
+                                            <path
+                                                d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z"
+                                                fill="#4cc9f0" />
+                                        </svg>
+                                    </span>
+                                    <span class="datetime-text">Choisir heure & date</span>
+                                </div>
+                                <div class="presets">
+                                    <div class="preset">5 min</div>
+                                    <div class="preset">30 min</div>
+                                    <div class="preset">1 heure</div>
+                                </div>
+                                <button class="confirm-btn">Confirmer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-mouse">
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
         </section>
-        <img class="screenshot" src="img/screen1.png" alt="Capture PowerOFF 1">
+
+        <!-- Section Features -->
+        <section class="features" id="features">
+            <div class="section-gradient"></div>
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">
+                        <span>Pourquoi choisir PowerOFF ?</span>
+                    </div>
+                    <h2 class="section-title">
+                        Une expérience
+                        <span class="gradient-text">simplifiée</span>
+                    </h2>
+                    <p class="section-description">
+                        Une application conçue pour être simple et efficace, sans fonctionnalités inutiles.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon clock-icon"></div>
+                        <h3 class="feature-title">Simple à utiliser</h3>
+                        <p class="feature-description">
+                            Définissez l'heure d'arrêt en quelques clics et laissez PowerOFF faire le reste. Interface
+                            intuitive et épurée.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon zap-icon"></div>
+                        <h3 class="feature-title">Léger et rapide</h3>
+                        <p class="feature-description">
+                            Conçu pour être minimaliste et consommer un minimum de ressources système. Démarrage
+                            instantané.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon terminal-icon"></div>
+                        <h3 class="feature-title">Sans distractions</h3>
+                        <p class="feature-description">
+                            Pas de fonctionnalités superflues, pas de publicités, pas de notifications. Juste ce dont
+                            vous avez besoin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Download -->
+        <section class="download" id="download">
+            <div class="container">
+                <div class="download-card">
+                    <h2 class="download-title">
+                        Prêt à essayer
+                        <span class="gradient-text">PowerOFF</span>
+                        ?
+                    </h2>
+                    <p class="download-description">
+                        Téléchargez gratuitement PowerOFF et commencez à programmer l'arrêt de votre PC dès aujourd'hui.
+                    </p>
+                    <div class="download-buttons">
+                        <a href="https://github.com/tpodgro/poweroff/releases/download/PowerOFFv2/PowerOFFLauncher.zip" class="glowing-button">
+                            <span class="icon download-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24"
+                                    viewBox="0 0 128 128"><!-- Icon from Devicon by konpa - https://github.com/tpodgro/poweroff/devicons/devicon/blob/master/LICENSE -->
+                                    <path fill="#0078d4"
+                                        d="M67.328 67.331h60.669V128H67.328zm-67.325 0h60.669V128H.003zM67.328 0h60.669v60.669H67.328zM.003 0h60.669v60.669H.003z" />
+                                </svg></span>
+                            Télécharger pour Windows
+                        </a>
+                        <div class="version-info">
+                            Version 2.0 | Dernière mise à jour: 18 mai 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2025 PowerOFF - Projet Open Source</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2025 PowerOFF. Tous droits réservés.</p>
+                <p>Conçu avec ❤️ pour les utilisateurs de PC du monde entier</p>
+            </div>
+        </div>
     </footer>
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

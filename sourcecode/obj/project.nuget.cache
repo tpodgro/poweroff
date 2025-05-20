@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Ef/Ovj3QKwA=",
+  "dgSpecHash": "XUt9RRalzn8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\canit\\Desktop\\poweroff-csharp-fixed\\ShutdownTimerWPF.csproj",
+  "projectFilePath": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\v2\\poweroff\\sourcecode\\ShutdownTimerWPF.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\canit\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\canit\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\canit\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\canit\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
+    "C:\\Users\\tpodg\\.nuget\\packages\\microsoft.net.illink.analyzers\\7.0.100-1.23211.1\\microsoft.net.illink.analyzers.7.0.100-1.23211.1.nupkg.sha512",
+    "C:\\Users\\tpodg\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23211.1\\microsoft.net.illink.tasks.7.0.100-1.23211.1.nupkg.sha512"
   ],
   "logs": []
 }

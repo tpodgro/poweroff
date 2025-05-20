@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\canit\\Desktop\\poweroff-csharp-fixed\\ShutdownTimerWPF.csproj": {}
+    "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\v2\\poweroff\\sourcecode\\ShutdownTimerWPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\canit\\Desktop\\poweroff-csharp-fixed\\ShutdownTimerWPF.csproj": {
+    "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\v2\\poweroff\\sourcecode\\ShutdownTimerWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\canit\\Desktop\\poweroff-csharp-fixed\\ShutdownTimerWPF.csproj",
+        "projectUniqueName": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\v2\\poweroff\\sourcecode\\ShutdownTimerWPF.csproj",
         "projectName": "ShutdownTimerWPF",
-        "projectPath": "C:\\Users\\canit\\Desktop\\poweroff-csharp-fixed\\ShutdownTimerWPF.csproj",
-        "packagesPath": "C:\\Users\\canit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\canit\\Desktop\\poweroff-csharp-fixed\\obj\\",
+        "projectPath": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\v2\\poweroff\\sourcecode\\ShutdownTimerWPF.csproj",
+        "packagesPath": "C:\\Users\\tpodg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tpodg\\Desktop\\WORKIN\\PowerOFF\\v2\\poweroff\\sourcecode\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\canit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tpodg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,6 +49,20 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Microsoft.NET.ILLink.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.100-1.23211.1, )",
+              "autoReferenced": true
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,24 +74,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.36, 6.0.36]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

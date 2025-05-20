@@ -1,0 +1,5 @@
+C:\Users\tpodg\Desktop\WORKIN\PowerOFF\v2\ShutdownTimerWPF.exe
+C:\Users\tpodg\Desktop\WORKIN\PowerOFF\v2\ShutdownTimerWPF.dll
+C:\Users\tpodg\Desktop\WORKIN\PowerOFF\v2\ShutdownTimerWPF.deps.json
+C:\Users\tpodg\Desktop\WORKIN\PowerOFF\v2\ShutdownTimerWPF.runtimeconfig.json
+C:\Users\tpodg\Desktop\WORKIN\PowerOFF\v2\ShutdownTimerWPF.pdb

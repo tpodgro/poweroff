@@ -14,6 +14,7 @@ namespace ShutdownTimerWPF
     public partial class MainWindow : Window
     {
         private DispatcherTimer timer;
+        private DispatcherTimer realTimeClock; // Ajouté pour l'horloge en direct
         private DateTime targetTime;
         private DateTime selectedDate;
         private int selectedHours = 23;
@@ -28,8 +29,22 @@ namespace ShutdownTimerWPF
             // Initialisation avec la date/heure actuelle
             InitializeWithCurrentTime();
 
+            // Démarrage de l'horloge en direct
+            StartRealTimeClock();
+
             // Configuration de l'UI
             SetupUI();
+        }
+
+        private void StartRealTimeClock()
+        {
+            realTimeClock = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
+            realTimeClock.Tick += (s, e) =>
+            {
+                var now = DateTime.Now;
+                CurrentTimeDisplay.Text = now.ToString("HH:mm:ss");
+            };
+            realTimeClock.Start();
         }
 
         private void InitializeWithCurrentTime()
@@ -59,7 +74,6 @@ namespace ShutdownTimerWPF
 
         private void AdjustUIForCurrentSize()
         {
-            // Ajustements responsifs
             CurrentTimeDisplay.FontSize = ActualWidth < 320 ? 36 : 48;
             CurrentDateDisplay.FontSize = ActualWidth < 320 ? 12 : 14;
             InputPanel.Margin = new Thickness(0, ActualHeight < 500 ? 5 : 10, 0, 0);
@@ -88,14 +102,13 @@ namespace ShutdownTimerWPF
 
         private void HoursUpButton_Click(object sender, RoutedEventArgs e) => UpdateTime(1, 0);
         private void HoursDownButton_Click(object sender, RoutedEventArgs e) => UpdateTime(-1, 0);
-        private void MinutesUpButton_Click(object sender, RoutedEventArgs e) => UpdateTime(0, 5);
-        private void MinutesDownButton_Click(object sender, RoutedEventArgs e) => UpdateTime(0, -5);
+        private void MinutesUpButton_Click(object sender, RoutedEventArgs e) => UpdateTime(0, 1);
+        private void MinutesDownButton_Click(object sender, RoutedEventArgs e) => UpdateTime(0, -1);
 
         private void UpdateTimeDisplay()
         {
             HoursDisplay.Text = selectedHours.ToString("D2");
             MinutesDisplay.Text = selectedMinutes.ToString("D2");
-            CurrentTimeDisplay.Text = $"{selectedHours:D2}:{selectedMinutes:D2}";
         }
 
         #endregion
@@ -123,14 +136,12 @@ namespace ShutdownTimerWPF
 
         private void InitializeCalendarGrid()
         {
-            // Configuration de la grille 6x7
             for (int i = 0; i < 6; i++)
                 CalendarGrid.RowDefinitions.Add(new RowDefinition());
 
             for (int i = 0; i < 7; i++)
                 CalendarGrid.ColumnDefinitions.Add(new ColumnDefinition());
 
-            // Création des boutons
             calendarButtons = new Button[6, 7];
             for (int row = 0; row < 6; row++)
             {
@@ -153,16 +164,12 @@ namespace ShutdownTimerWPF
 
         private void UpdateCalendarDisplay()
         {
-            // Mise à jour de l'en-tête
             MonthYearDisplay.Text = $"{CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(currentMonth).ToLower()} {currentYear}";
-
-            // Calcul des jours
             var firstDay = new DateTime(currentYear, currentMonth, 1);
             int firstDayOfWeek = ((int)firstDay.DayOfWeek + 6) % 7;
             int daysInMonth = DateTime.DaysInMonth(currentYear, currentMonth);
             DateTime today = DateTime.Today;
 
-            // Réinitialisation des boutons
             foreach (Button btn in calendarButtons)
             {
                 btn.Content = "";
@@ -170,7 +177,6 @@ namespace ShutdownTimerWPF
                 btn.IsEnabled = false;
             }
 
-            // Remplissage des jours
             int day = 1;
             for (int i = 0; i < 6 && day <= daysInMonth; i++)
             {
@@ -206,7 +212,7 @@ namespace ShutdownTimerWPF
                 selectedDate = new DateTime(currentYear, currentMonth, day, selectedHours, selectedMinutes, 0);
 
                 UpdateDateDisplay();
-                UpdateCalendarDisplay(); // Rafraîchit tout le calendrier pour la sélection
+                UpdateCalendarDisplay();
             }
         }
 
@@ -288,11 +294,9 @@ namespace ShutdownTimerWPF
             int seconds = (int)(targetTime - DateTime.Now).TotalSeconds;
             Process.Start(new ProcessStartInfo("shutdown", $"/s /t {seconds}") { CreateNoWindow = true });
 
-            // Transition UI
             AnimatePanelTransition(InputPanel, CountdownPanel);
             ShutdownDateText.Text = targetTime.ToString("dd/MM/yyyy");
 
-            // Timer
             timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
             timer.Tick += (s, evt) => UpdateCountdownDisplay();
             timer.Start();
